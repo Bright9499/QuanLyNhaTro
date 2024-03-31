@@ -1,0 +1,219 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin: 0;
+	padding: 0;
+	background: #EEEEEE;
+}
+
+header{
+	padding: 5px;
+	width: 100%;
+	height: 70px;
+	background: white;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+header ul{
+	display: flex;
+	list-style: none;
+	float:right;
+	
+}
+header ul li{
+	margin-right: 20px;
+	margin-top: 5px;
+	list-style: none;
+}
+
+header ul li a{
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	padding: 10px 20px;
+	background: white;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+header ul li a:hover{
+	border-radius: 5px;
+	background: #676767;
+	color: white;
+}
+
+
+#btnDN{
+	background: none;
+	color: #FF7E00;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: 2px solid #FF7E00;
+	margin-right: 50px;
+	transition: background-color 0.3s;
+}
+#btnDN:hover{
+	background: #FF7E00;
+	color: white;
+}
+
+.container{
+	margin: 50px;
+	width: 93%;
+	height: 1700px;
+	display: flex;
+}
+
+.trang {
+	width: 100%;
+	height: 50px;
+	background: lightgray;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.trang a{
+	margin: 10px;
+	text-decoration: none;
+}
+
+.trang a:hover{
+	text-decoration: underline;
+}
+
+.left{
+	margin-top: 10px;
+	border-radius: 5px;
+	padding: 10px;
+	background: white;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.yeuthich{
+	margin: 13px;
+	width: 46%;
+	height: 200px;
+	background: lightgrey;
+	border-radius: 5px;
+	transition: transform 0.3s ease;
+}
+
+.yeuthich:hover{
+	transform: translateY(-5px);
+}
+
+.ttYeuThich{
+	margin: 10px;
+	width: 95%;
+	height: 100%;
+}
+
+.ttYeuThich img{
+	width: 160px;
+	height: 180px;
+	margin-right: 10px;
+	float: left;
+}
+
+.ttYeuThich strong{
+	color: blue;
+}
+
+.giaThue{
+	color: brown;
+	float: left;
+	margin-right: 5px
+}
+
+.ngayDang{
+	font-size: 15px;
+	margin-left: 5px;
+}
+
+.tenTro{
+	color: green;
+}
+.leftCon{
+	margin: 10px;
+	width: 70%;
+	height: 98%;
+}
+
+.leftCon h3,h2{
+	text-align: center;
+}
+
+.rightCon{
+	width: 30%;
+	height: 99%;
+}
+
+.topRight{
+	margin-top: 10px;
+	width: 100%;
+	height: 910px;
+	background: white;
+	border-radius: 5px;
+}
+.topRight h1{
+	margin-top: 0px;
+	text-align: center;
+}
+
+.NT img{
+	width: 150px;
+	height: 100px;
+	margin-left:10px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.NT .ten{
+	color: blue;
+	font-size: 14px;
+}
+
+.NT1{
+	display: flex;
+	margin-bottom: 0px;
+}
+.gia{
+	color: green;
+	font-size: 14px;
+}
+.ngay{
+	font-size: 14px;
+	margin-left: 25px;
+}
+
+.bottomRight{
+	margin-top: 10px;
+	width: 100%;
+	height: 250px;
+	background: white;
+	border-radius: 5px;
+}
+
+.bottomRight a{
+	text-decoration: none;
+	color: black;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.bottomRight a:hover{
+	color: #FF7E00;
+}
+
+
+.footer {
+	background-color: white;
+	margin-top: 0px;
+	padding: 20px;
+	text-align: center;
+}

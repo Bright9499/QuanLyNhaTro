@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+.error {
+	background-color: red;
+	color: red;
+}
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 80vh;
+    margin-top: 80px;
+    border: 1px solid #FF7E00;
+  }
+  
+  .left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left-section img {
+    width: 600px;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .box-login {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+  }
+  
+  .box-header {
+    margin-top: -400px;
+    text-align: center;
+    margin-right: -215px;
+  }
+  
+  .box-header h3 {
+    margin: 0;
+    color: #FF7E00;
+    font-size: 25px;
+  }
+  
+  .box-content .row {
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    position: relative;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 14px 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+  .remm{
+    color: black;
+  }
+  
+  .rowlast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  .lost-pass{
+    margin-left: 80px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .sign-in {
+    text-decoration: none;
+    background-color: #FF7E00;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 120px;
+    font-size: medium;
+  }
+  .footer-column{
+    margin-top: 30px;
+  }
+  .footer-column h4 {
+    margin-left: 130px;
+    margin-bottom: 10px;
+    color: black;
+  }
+
+  
+  .footer-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 120px;
+  }
+  
+  .footer-column ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .footer-column ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .footer-column ul li a i {
+    font-size: 23px;
+    vertical-align: middle;
+  }
+  .end{
+    margin-top: 30px;
+  }
+  .end a{
+    color: black;
+  }
+  .text1{
+    margin-left: 70px;
+  }
+  .lost{
+    margin-left: 0px;
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+  }
+  
