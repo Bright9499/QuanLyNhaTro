@@ -28,7 +28,7 @@
 				</li>
 				<li>
 					<a href="#" onClick="toggleMenu()">
-						<img name="img" class="hinhdd" src="img/IMG_2332.JPG">
+						<img name="img" class="hinhdd" src="img/avatar.jpg">
 					</a>
 				</li>
 			</ul>

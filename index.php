@@ -129,7 +129,8 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID'])) {
                     echo '<a href="sanphamchitiet.php?id=' . htmlspecialchars($row["nhatro_id"]) . '">';
                     echo '<img src="img/' . htmlspecialchars($row["image"]) . '">';
                     echo "<p class='name'>" . htmlspecialchars($row['tieude']) . "</p>";
-                    echo "<b class='price'>" . htmlspecialchars($row['gia']) . "</b> <span style='color: green;'>VND/tháng</span><strong class='acreage'>" . htmlspecialchars($row['dientich']) . "m<sup>2</sup></strong>";
+                    echo "<b class='price'>" . htmlspecialchars($row['gia']) . "</b> <span style='color: green;'>VND/tháng</span><br><br>";
+                    echo "<strong class='acreage'>" . htmlspecialchars($row['dientich']) . "m<sup>2</sup></strong>";
                     echo "<p>Địa chỉ: <span class='address'>" . htmlspecialchars($row['diachi']) . "</span></p>";
                     echo '  Mô tả:';
                     echo "<p class='describe'>" . htmlspecialchars($row['mota']) . "</p>";
