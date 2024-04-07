@@ -67,7 +67,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID'])) {
     <article class="left-section">
 <?php
 include 'database.php';
-$sql = "SELECT * FROM `nhatro` WHERE `nhatro_id`=" . $_GET['id'];
+$sql = "SELECT * FROM `nhatro` WHERE status = 0 AND `nhatro_id`=" . $_GET['id'];
 $result = $conn->query($sql);
 if ($result && $result->num_rows > 0) {
     $row = $result->fetch_assoc();

@@ -120,7 +120,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID'])) {
         <div class="content">
             <?php
             include 'database.php';
-            $sql = "SELECT * FROM nhatro limit 6 "; // Limiting to 6 results
+            $sql = "SELECT * FROM nhatro WHERE status = 0 limit 6 "; // Limiting to 6 results
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {

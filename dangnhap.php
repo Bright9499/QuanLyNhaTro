@@ -1,14 +1,30 @@
 <?php
 include 'database.php';
+
+
 if(isset($_POST['dangnhap'])){
+
+    session_start();
+
     $email=$_POST['email'];
     $email1=$_POST['email1'];
-    $sql= "SELECT * FROM user WHERE email='$email' AND pass='$email1'";
-    $result = mysqli_query($conn,$sql);
-    $user = mysqli_fetch_assoc($result);
+    $sql= "SELECT * FROM user WHERE email='$email' AND pass='$email1' AND delete_fg = 0 ";
+    $result = mysqli_query($conn, $sql);
+
     if($result && mysqli_num_rows($result) > 0) {
+
+        $user = mysqli_fetch_assoc($result);
+
         // Successful login
-        header("Location: index.php?id=" .$user["ID"] . "");
+        $_SESSION['name'] = $user["name"]; // Sử dụng username từ cơ sở dữ liệu
+        $_SESSION['role'] = $user["role"];
+
+        if ($user["role"] == 'admin') {
+            header("Location: admin/html/index.php?id=" .$user["ID"] . "");
+        } elseif ($user["role"] == 'user') {
+            header("Location: index.php?id=" .$user["ID"] . "");
+        }
+
         exit(); // Stop script execution after redirection
     } else {
         // Unsuccessful login
