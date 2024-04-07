@@ -1,0 +1,32 @@
+   table {
+        width: 100%;
+        border-collapse: collapse; /* Đảm bảo các dòng kẻ không bị gián đoạn */
+        margin: 20px 0;
+        border: 1px solid #ddd; /* Thêm dòng kẻ ngoại vi cho toàn bộ bảng */
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd; /* Thêm dòng kẻ dưới cho mỗi ô */
+    }
+
+    th {
+        background-color: #04AA6D;
+        color: white;
+        border-bottom: 2px solid #ddd; /* Dòng kẻ dưới tiêu đề dày hơn để tạo điểm nhấn */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2; /* Thêm màu nền cho các hàng chẵn để dễ đọc */
+    }
+
+    .xemThem {
+        color: #04AA6D;
+        text-decoration: none;
+    }
+
+    .xemThem:hover {
+        text-decoration: underline;
+    }
+

@@ -75,7 +75,7 @@ checkAdminRole();
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
             <div class="app-brand demo">
-                <a href="index.html" class="app-brand-link">
+                <a href="index.php" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <svg
                         width="25"
@@ -152,7 +152,7 @@ checkAdminRole();
                             </a>
                         </li>
                         <li class="menu-item active">
-                            <a href="index.html" class="menu-link">
+                            <a href="index.php" class="menu-link">
                                 <div data-i18n="Analytics">Analytics</div>
                             </a>
                         </li>
@@ -170,12 +170,12 @@ checkAdminRole();
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="pages-account-settings-notifications.html" class="menu-link">
+                            <a href="pages-account-settings-notifications.php" class="menu-link">
                                 <div data-i18n="Notifications">Notifications</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="pages-account-settings-connections.html" class="menu-link">
+                            <a href="pages-account-settings-connections.php" class="menu-link">
                                 <div data-i18n="Connections">Connections</div>
                             </a>
                         </li>
@@ -188,17 +188,17 @@ checkAdminRole();
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="auth-login-basic.html" class="menu-link" target="_blank">
-                                <div data-i18n="Basic">Login</div>
+                            <a href="quanlibaidang.php" class="menu-link" target="_blank">
+                                <div data-i18n="Basic">Quản lý bài đăng</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="auth-register-basic.html" class="menu-link" target="_blank">
+                            <a href="auth-register-basic.php" class="menu-link" target="_blank">
                                 <div data-i18n="Basic">Register</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
+                            <a href="auth-forgot-password-basic.php" class="menu-link" target="_blank">
                                 <div data-i18n="Basic">Forgot Password</div>
                             </a>
                         </li>
@@ -296,12 +296,12 @@ checkAdminRole();
                                     <a class="nav-link active" href="javascript:void(0);"><i class="bx bx-user me-1"></i> Account</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="pages-account-settings-notifications.html"
+                                    <a class="nav-link" href="pages-account-settings-notifications.php"
                                     ><i class="bx bx-bell me-1"></i> Notifications</a
                                     >
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="pages-account-settings-connections.html"
+                                    <a class="nav-link" href="pages-account-settings-connections.php"
                                     ><i class="bx bx-link-alt me-1"></i> Connections</a
                                     >
                                 </li>
@@ -529,19 +529,19 @@ checkAdminRole();
                             <a href="#" target="_blank" class="footer-link fw-medium">Minh Ngoc</a>
                         </div>
                         <div class="d-none d-lg-inline-block">
-                            <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                            <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+                            <a   href="#" class="footer-link me-4" target="_blank">License</a>
+                            <a   href="#" target="_blank" class="footer-link me-4">More Themes</a>
 
                             <a
-                                    href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/"
+                                    href="#"
                                     target="_blank"
                                     class="footer-link me-4"
                             >Documentation</a
                             >
 
                             <a
-                                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                                    target="_blank"
+                                  href="#"
+                                    target="_blank" 
                                     class="footer-link"
                             >Support</a
                             >
