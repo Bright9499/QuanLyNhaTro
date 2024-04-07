@@ -44,7 +44,7 @@ create table project.nhatro
     dientich        int              not null,
     image           char(255)        not null,
     video           char(50)         not null,
-    status          bit default b'0' null,
+    status          bit default b'1' null,
     constraint FK_nhatro_user
         foreign key (MaNg_dang) references project.user (ID)
 );

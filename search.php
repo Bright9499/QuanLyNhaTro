@@ -80,7 +80,7 @@ if(isset($_POST['search'])) {
         'ward' => $ward
     );
     // Xây dựng câu truy vấn SQL dựa trên dữ liệu từ biểu mẫu
-    $sql = "SELECT * FROM `nhatro` WHERE 1=1";
+    $sql = "SELECT * FROM `nhatro` WHERE 1=1 and status = 0 ";
 
     // Thêm điều kiện cho thành phố (nếu có)
     if (!empty($city)&&$city!="Chọn tỉnh thành") {

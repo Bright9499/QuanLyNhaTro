@@ -74,9 +74,9 @@ if(isset($_GET['area']) && !empty($_GET['area'])) {
     
     if($area < 50) {
         // Thực hiện truy vấn SQL dựa trên diện tích được chọn
-        $sql = "SELECT * FROM `nhatro` WHERE dientich <= $area";
+        $sql = "SELECT * FROM `nhatro` WHERE status = 0 and dientich <= $area";
     } else {
-        $sql = "SELECT * FROM `nhatro` WHERE dientich >= $area";
+        $sql = "SELECT * FROM `nhatro` WHERE status = 0 and dientich >= $area";
     }
     
     // Thực hiện truy vấn

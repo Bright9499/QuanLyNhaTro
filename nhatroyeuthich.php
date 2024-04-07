@@ -75,7 +75,7 @@ if ($result1->num_rows > 0) {
     // Lặp qua mỗi nhatro_id
     while($row1 = $result1->fetch_assoc()) {
         // Lấy thông tin nhà trọ từ bảng nhatro sử dụng nhatro_id
-        $stmt = $conn->prepare("SELECT * FROM nhatro WHERE nhatro_id = ?");
+        $stmt = $conn->prepare("SELECT * FROM nhatro WHERE status = 0 and nhatro_id = ?");
         $stmt->bind_param("i", $row1['nhatro_id']); // 'i' cho kiểu dữ liệu integer
         $stmt->execute();
         $result2 = $stmt->get_result();
