@@ -19,14 +19,15 @@ if(isset($_POST["dangtin"])){
     $imagepath=basename($_FILES["image"]["name"]);
     $target_dir = "img/";
     $target_file = $target_dir .$imagepath ;
+	$lichxem = $_POST["lichxem"];
 
     if(move_uploaded_file($_FILES["image"]["tmp_name"],$target_file)){
          echo '<script>alert("Hình đã được upload")</script>';
     }else{
         echo '<script>alert("Hình không được upload")</script>';
     }
-    $sql = "INSERT INTO nhatro (tinh,quan,phuong, sonhavaduong, diachi, loainha, tieude, mota, thongtinlienhe, sodt, gia, dientich, doituongchothue, image,video) 
-        VALUES ('$city', '$district', '$ward', '$sonha', '$diachi', '$loainha', '$tieude', '$moTa', '$name', '$sdt', '$giaThue', '$dienTich', '$doituong', '$imagepath','')";
+    $sql = "INSERT INTO nhatro (tinh,quan,phuong, sonhavaduong, diachi, loainha, tieude, mota, thongtinlienhe, sodt, gia, dientich, doituongchothue, image,video,lichxem) 
+        VALUES ('$city', '$district', '$ward', '$sonha', '$diachi', '$loainha', '$tieude', '$moTa', '$name', '$sdt', '$giaThue', '$dienTich', '$doituong', '$imagepath','', $lichxem)";
     mysqli_query($conn,$sql);
     echo '<script>alert("Đã đăng tin thành công")</script>';
     } 
@@ -123,6 +124,8 @@ if(isset($_POST["dangtin"])){
 				<input type="text" class="txtName" name="lienhe"><br><br>
 				<b>Số điện thoại</b><br>
 				<input type="text" class="txtSDT" name="sodt"><br><br>
+				<b>Lịch xem trọ:</b><br>
+				<input type="text" class="txtSDT" name="lichxem"><br><br>
 				<b>Giá cho thuê</b><br>
 				<input type="text" class="txtGiaThue" name="giathue"><select class="optionThue"><option>Đồng/tháng</option><option>Đồng/m<sup>2</sup>/tháng</option></select><br><br>
 				<b>Diện tích</b><br>
