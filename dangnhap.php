@@ -67,7 +67,7 @@ if(isset($_POST['dangnhap'])){
               <div class="singin">
                 <button id="signin" name="dangnhap" class="sign-in">Sign in</button>
               </div>
-              <div class="footer-column">s
+              <div class="footer-column">
                 <h4>Or join with</h4>
                 <ul class="font">
                     <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>

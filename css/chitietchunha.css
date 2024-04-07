@@ -1,0 +1,273 @@
+
+/* CSS Document */
+body{
+	margin: 0;
+	padding: 0;
+	background:white4;
+	font-family: Arial, sans-serif;
+}
+
+header{
+	padding: 5px;
+	width: 100%;
+	height: 50px;
+	background: white;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+.Container{
+	margin: 50px;
+	
+	width: 95%;
+	height: 1000px;
+	border-radius: 5px;
+}
+
+.Container h1{
+	margin-bottom: 50px;
+	font-size: 35px;
+
+	
+}
+h1 {
+    color: #FF7E00;
+    text-align: center;
+}
+
+.info-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+	border: 2px solid gray;
+}
+
+.info-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+	float: left;
+}
+
+.font {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-top: -20px;
+	margin-left: 240px;
+	
+}
+
+.font a {
+    text-decoration: none;
+    color: #666;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.font a:hover {
+    color: #FF7E00;
+}
+  .font li{
+    padding-left: 3px;
+    padding-right:20px;  
+  }
+.info-card p {
+    color: #666;
+    margin: 5 0 5px;
+	margin-left: 250px;
+	font-size: 20px;
+}
+ul{
+	display: flex;
+	list-style: none;
+	float:right;
+	
+}
+ul li{
+	margin-right: 20px;
+	list-style: none;
+}
+
+ul li a{
+	text-decoration: none;
+	color: black;
+	font-size: 15px;
+	padding: 10px 20px;
+	background: white;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+ul li a:hover{
+	border-radius: 5px;
+	background: grey;
+	color: white;
+}
+
+
+
+#btnDT{
+	background: none;
+	color: #FF7E00;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: 2px solid #FF7E00;
+	margin-right: 50px;
+	transition: background-color 0.3s;
+}
+#btnDT:hover{
+	background: #FF7E00;
+	color: white;
+}
+
+.User{
+	width: 100%;
+	height: 250px;
+	background: white;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+
+#avatarContainer {
+	width: 150px;
+	height: 150px;
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+#avatarLabel {
+	display: block;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	position: relative;
+}
+
+#avatar {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+#avatarInput {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.leftUser{
+	width: 600px;
+	float: left;
+	margin: 20px;
+}
+
+.rightUser{
+	margin: 20px;
+	height: 250px;
+	width: 490px;
+	float:left;
+	text-align: right;
+}
+
+.btnNap{
+	text-decoration: none;
+	color: #FF7E00;
+	border: 2px solid #FF7E00;
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin-top: 100px;
+	transition: background-color 0.3s;
+}
+
+.btnNap:hover{
+	background: #FF7E00;
+	color: white;
+}
+
+.Main{
+	background: white;
+	margin-top: 25px;
+	width: 100%;
+	height: 800px;
+	display: flex;
+}
+
+.leftMain{	
+	height: 800px;
+	background: white;
+	border-radius: 5px;
+	border: 2px solid grey;
+}
+
+
+
+.leftMain a{
+	text-decoration: none;
+	color: white;
+	padding: 10px 15px;
+	background: grey;
+	transform: background-color 0.3s;
+	border-radius: 5px;
+	margin: 2px;
+	margin-left: 20px;
+}
+
+.leftMain a:hover{
+	background: #FF7E00;
+}
+
+	
+
+.NT{
+	margin:50px;
+	width: 600px;
+	height: 200px;
+	background: white;
+	float: left;
+	margin-left: 100px;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.NT img{
+	border-radius: 10px;
+	margin-top: -10px;
+}
+.NT p{
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 20px;
+	cursor: pointer;
+}
+.NT p:hover{
+	color: #FF7E00;
+}
+#infor-user{
+    margin-top: 10px;
+    width: 750px;
+	height: 250px;
+  }
+
+.hinhTro{
+	width: 150px;
+	height: 150px;
+	margin: 10px;
+	float: left;
+	
+}
+
+.footer {
+	background-color: white;
+	margin-top: 600px;
+	padding: 20px;
+	text-align: center;
+}

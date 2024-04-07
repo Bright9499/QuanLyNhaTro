@@ -46,7 +46,7 @@ body {
   }
   
   .box-header h3 {
-    margin: 0;
+    margin-bottom: 100px;
     color: #FF7E00;
     font-size: 25px;
   }

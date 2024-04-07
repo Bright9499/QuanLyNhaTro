@@ -1,4 +1,4 @@
-@charset "utf-8";
+
 /* CSS Document */
 body{
 	margin: 0;
@@ -171,10 +171,6 @@ th, td {
 .topRight h1{
 	margin-top: 0px;
 	text-align: center;
-}
-
-.NT{
-	
 }
 
 .NT img{

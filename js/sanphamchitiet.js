@@ -9,4 +9,12 @@ function changeImage() {
   currentImage = (currentImage + 1) % images.length; // Chuyển đến hình ảnh tiếp theo
   imageElement.src = images[currentImage]; // Thay đổi nguồn hình ảnh
   }
+  function toggleMenu() {
+    var menu = document.getElementById('menu');
+    if (menu.style.display === 'none') {
+      menu.style.display = 'block';
+    } else {
+      menu.style.display = 'none';
+    }
+  }
   

@@ -20,7 +20,6 @@ function renderCity(data) {
     ward.length = 1;
     if(this.value != ""){
       const result = data.filter(n => n.Id === this.value);
-
       for (const k of result[0].Districts) {
         district.options[district.options.length] = new Option(k.Name, k.Id);
       }
@@ -31,13 +30,70 @@ function renderCity(data) {
     const dataCity = data.filter((n) => n.Id === citis.value);
     if (this.value != "") {
       const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
-
       for (const w of dataWards) {
         wards.options[wards.options.length] = new Option(w.Name, w.Id);
       }
     }
   };
 }
+
+
+const citySelect = document.getElementById('city');
+const districtSelect = document.getElementById('district');
+const wardSelect = document.getElementById('ward');
+
+
+citySelect.addEventListener('change', updateFullAddress);
+districts.addEventListener('change', updateFullAddress);
+wards.addEventListener('change', updateFullAddress);
+
+
+function updateFullAddress(){
+	var city = citySelect.options[citySelect.selectedIndex].text;
+	var district = districtSelect.options[ districtSelect.selectedIndex].text;
+	var ward =wardSelect.options[wardSelect.selectedIndex].text;
+
+const thanhpho = document.getElementById('thanhpho');
+thanhpho.value= city; 	
+const quan = document.getElementById('quan');
+quan.value=district; 	
+const phuong = document.getElementById('phuong');
+phuong.value=ward; 	
+document.getElementById('showInputsButton').addEventListener('click', function() {
+  document.getElementById('thanhpho').style.display = 'block';
+  document.getElementById('quan').style.display = 'block';
+  document.getElementById('phuong').style.display = 'block';
+});
+}
+
+// const citySelect = document.getElementById('city');
+// const districtSelect = document.getElementById('district');
+// const wardSelect = document.getElementById('ward');
+
+// citySelect.addEventListener('change', updateFullAddress);
+// districts.addEventListener('change', updateFullAddress);
+// wards.addEventListener('change', updateFullAddress);
+
+// function updateFullAddress() {
+//     var city = citySelect.selectedIndex !== -1 ? citySelect.options[citySelect.selectedIndex].text : null;
+//     var district = districtSelect.selectedIndex !== -1 ? districtSelect.options[districtSelect.selectedIndex].text : null;
+//     var ward = wardSelect.selectedIndex !== -1 ? wardSelect.options[wardSelect.selectedIndex].text : null;
+
+//     const thanhpho = document.getElementById('thanhpho');
+//     thanhpho.value = city !== null ? city : ''; // Nếu city là null thì gán chuỗi rỗng
+
+//     const quan = document.getElementById('quan');
+//     quan.value = district !== null ? district : ''; // Nếu district là null thì gán chuỗi rỗng
+
+//     const phuong = document.getElementById('phuong');
+//     phuong.value = ward !== null ? ward : ''; // Nếu ward là null thì gán chuỗi rỗng
+
+//     document.getElementById('showInputsButton').addEventListener('click', function () {
+//         document.getElementById('thanhpho').style.display = 'block';
+//         document.getElementById('quan').style.display = 'block';
+//         document.getElementById('phuong').style.display = 'block';
+//     });
+// }
 
 var slider = document.getElementById("myRange");
 var valueLabel = document.getElementById("value");
@@ -48,12 +104,11 @@ slider.oninput = function() {
   valueLabel.innerHTML = this.value;
 };
 
-// JavaScript để điều khiển hiển thị menu khi click
-    function toggleMenu() {
-      var menu = document.getElementById('menu');
-      if (menu.style.display === 'none') {
-        menu.style.display = 'block';
-      } else {
-        menu.style.display = 'none';
-      }
-    }
+function toggleMenu() {
+  var menu = document.getElementById('menu');
+  if (menu.style.display === 'none') {
+    menu.style.display = 'block';
+  } else {
+    menu.style.display = 'none';
+  }
+}
