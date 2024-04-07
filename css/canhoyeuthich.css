@@ -41,7 +41,13 @@ header ul li a:hover{
 	background: #676767;
 	color: white;
 }
-
+.hinhdd{
+	background: none;
+	margin-top: -7px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
 
 #btnDN{
 	background: none;

@@ -70,14 +70,14 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID'])) {
     }
 }
 ?>
-
         </ul>
     </nav>
 </header>
+
 <div class="menu">
     <ul id="menu">
         <li><a href="#">Quản lý tài khoản</a></li>
-        <li><a href="canhoyeuthich.php">Căn hộ yêu thích</a></li>
+        <li><a href="nhatroyeuthich.php">Căn hộ yêu thích</a></li>
         <li><a href="#">Cài đặt tài khoản</a></li>
     </ul>
 </div>
@@ -126,15 +126,17 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID'])) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="nt1">';
                     echo '  <hr>';
-                    echo '<a href="sanphamchitiet.php?id=' . $row["nhatro_id"] . '">';
-                    echo '<img src="img/' . $row["image"] . '">';
-                    echo "<p class='Name'>" . $row['tieude'] . "</p>";
-                    echo "<b class='Price'>" . $row['gia'] . "</b> <a style='color: green; font-weight:16 '>VND/tháng</a><strong><strong class='acreage'>" . $row['dientich'] . "</strong>m<sup>2</sup></strong>";
-                    echo "<p>Địa chỉ: <a class='address'>" . $row['diachi'] . "</a></p>";
+                    echo '<a href="sanphamchitiet.php?id=' . htmlspecialchars($row["nhatro_id"]) . '">';
+                    echo '<img src="img/' . htmlspecialchars($row["image"]) . '">';
+                    echo "<p class='name'>" . htmlspecialchars($row['tieude']) . "</p>";
+                    echo "<b class='price'>" . htmlspecialchars($row['gia']) . "</b> <span style='color: green;'>VND/tháng</span><strong class='acreage'>" . htmlspecialchars($row['dientich']) . "m<sup>2</sup></strong>";
+                    echo "<p>Địa chỉ: <span class='address'>" . htmlspecialchars($row['diachi']) . "</span></p>";
                     echo '  Mô tả:';
-                    echo "<p class='describe'>" . $row['mota'] . "</p>";
-                    echo '<a class="themYT" href="#">Thêm vào mục yêu thích</a>';
-                    echo '</a>';
+                    echo "<p class='describe'>" . htmlspecialchars($row['mota']) . "</p>";
+                    echo '</a>'; // Đóng thẻ <a> trước khi mở <button>
+                    echo '<form action="addnhatroyt.php?id=' . htmlspecialchars($row["nhatro_id"]) . '" method="post">';
+                    echo '<button class="themYT" type="submit" name="add">Thêm vào mục yêu thích</button>';
+                    echo '</form>';
                     echo '</div>';
                 }
             } else {
