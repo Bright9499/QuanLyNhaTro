@@ -47,7 +47,12 @@ background: #676767;
 color: white;
 }
 
-
+.logo{
+	width: 150px;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 30px;
+}
 header #btnDN{
 background: none;
 color: #FF7E00;

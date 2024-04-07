@@ -18,6 +18,7 @@ include 'database.php';
 <body>
 		<header>
 		<nav>
+    <img class="logo" src="img/logo của kiệt căn nhà1.jpg">
 			<ul>
 				<li>
 					<a href="index.php">Trang chủ</a>
@@ -84,6 +85,7 @@ if ($result && $result->num_rows > 0) {
     echo '<div class="section-header"><h2 class="section-title">Thông tin mô tả</h2></div>';
     echo '<div class="section-content">';
     echo '<p>' . $row["mota"] . '</p>';
+    echo '<p>Lịch Xem Trọ: ' . $row["lichxem"] . '</p>';
     echo '</div>';
     echo '</section>';
     echo '<section class="map">';

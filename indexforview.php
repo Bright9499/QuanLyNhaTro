@@ -10,6 +10,7 @@
 	<form>
 	<header>
 		<nav>
+		<img class="logo" src="img/logo của kiệt căn nhà1.jpg">
 			<ul>
 				<li>
 					<a href="index.php">Trang chủ</a>
@@ -28,7 +29,7 @@
 				</li>
 				<li>
 					<a href="#" onClick="toggleMenu()">
-						<img name="img" class="hinhdd" src="img/IMG_2332.JPG">
+						<img name="img" class="hinhdd" src="img/avatar.jpg">
 					</a>
 				</li>
 			</ul>

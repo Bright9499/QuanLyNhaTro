@@ -50,7 +50,12 @@ body {
     color: #FF7E00;
     font-size: 25px;
   }
-  
+  .logo{
+    width: 150px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 30px;
+  }
   .box-content .row {
     margin-bottom: 20px;
   }

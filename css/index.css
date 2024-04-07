@@ -5,7 +5,12 @@ body{
 	padding: 0;
 	background: #EEEEEE;
 }
-
+.logo{
+	width: 150px;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 30px;
+}
 header{
 	padding: 5px;
 	width: 100%;
@@ -337,4 +342,153 @@ sup{
 	margin-top: 1500px;
 	padding: 20px;
 	text-align: center;
+}
+/* ho tro */
+.chat{
+	width: 50px;
+	height: 226px;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+}
+
+.chat img{
+	width: 90%;
+	margin-top: 5px;
+}
+
+#chatImg{
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
+	position: absolute;
+	bottom: 0px;
+	background-color: #FF7e00;
+}
+
+#mess{
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
+	background-color: rgba(42,0,255,1.00);
+	display: none;
+}
+
+#zalo{
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
+	background-color: white;
+	display: none;
+}
+
+#hotline{
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
+	background-color: grey;
+	display: none;
+}
+.chat:hover{
+	cursor: pointer;
+}
+
+.khungChat {
+	display: none;
+	width: 300px; /* Điều chỉnh kích thước theo nhu cầu */
+	height: 400px; /* Điều chỉnh kích thước theo nhu cầu */
+	overflow: auto; /* Hiển thị thanh cuộn khi nội dung vượt quá kích thước khungChat */
+	background: white;
+	position: fixed;
+	right: 70px;
+	bottom: 10px;
+	border: 1px solid black;
+}
+
+.headerKhungChat{
+	width: 100%;
+	height: 50px;
+	background-color: #FF7E00;
+	display: flex;
+}
+
+.headerKhungChat b{
+	font-size: 16px;
+	color: white;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+
+.headerKhungChat a{
+	text-decoration: none;
+	color: black;
+	margin-top: 15px;
+	margin-left: 60px;
+	font-size: 16px;
+}
+header input{
+	width: 300px;
+	height: 40px;
+	margin: 7px;
+	border-radius: 10px;
+	padding-left: 10px;
+	float: left;
+}
+
+.messageContainer {
+	max-height: 300px; /* Đặt chiều cao tối đa cho khung tin nhắn */
+	overflow-y: auto; /* Hiển thị thanh cuộn khi nội dung vượt quá chiều cao tối đa */
+}
+.user-message {
+	white-space: pre-wrap; /* Cho phép xuống dòng trong tin nhắn */
+	word-wrap: break-word; /* Tách từ khi vượt quá chiều rộng của khung tin nhắn */
+	margin: 10px;
+	border-radius: 20px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	padding: 5px;
+	max-width: 80%;
+}
+
+.system-message {
+	white-space: pre-wrap; /* Cho phép xuống dòng trong tin nhắn */
+	word-wrap: break-word; /* Tách từ khi vượt quá chiều rộng của khung tin nhắn */
+	margin: 10px;
+	border-radius: 20px;
+	border: 1px solid #ccc;
+	padding: 5px;
+	display: inline-block;
+	background-color: #FF7E00;
+	max-width: 80%;
+}
+
+.bottomKhungChat{
+	width: 300px;
+	bottom: 10px;
+	position: fixed;
+	height: 50px;
+	background-color: #FF7E00;
+}
+
+.bottomKhungChat input{
+	width: 200px;
+	border-radius: 10px;
+	border: none;
+	margin-top: 5px;
+}
+
+.bottomKhungChat button{
+	width: 60px;
+	height: 42px;
+	background-color: white;
+	border: none;
+	border-radius: 10px;
+}
+
+.bottomKhungChat button:hover{
+	background-color: blue;
 }

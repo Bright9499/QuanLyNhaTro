@@ -35,7 +35,12 @@ header ul li a{
 	border-radius: 5px;
 	transition: background-color 0.3s;
 }
-
+.logo{
+	width: 150px;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 30px;
+}
 header ul li a:hover{
 	border-radius: 5px;
 	background: #676767;
@@ -123,11 +128,6 @@ header ul li a:hover{
 	margin-top: 0px;
 	text-align: center;
 }
-
-.NT{
-	
-}
-
 .NT img{
 	width: 150px;
 	height: 100px;
