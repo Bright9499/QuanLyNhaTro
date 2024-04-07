@@ -45,6 +45,7 @@ if(isset($_POST["dangtin"])){
 	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/form-data">
 	<header>
 		<nav>
+		<img class="logo" src="img/logo của kiệt căn nhà1.jpg">
 			<ul>
 				<li>
 					<a href="index.php">Trang chủ</a>

@@ -11,6 +11,7 @@
 <body>
 	<header>
 		<nav>
+		<img class="logo" src="img/logo của kiệt căn nhà1.jpg">
 			<ul>
 				<li>
 					<a href="index.html">Trang chủ</a>

@@ -230,7 +230,12 @@ ul li a:hover{
 	font-size: 25px;
 	border-radius: 5px;
 }
-
+.logo{
+	width: 150px;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 30px;
+}
 .footer {
 	background-color: white;
 	margin-top: 600px;

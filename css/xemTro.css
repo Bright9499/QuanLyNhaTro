@@ -181,7 +181,12 @@ th, td {
 	margin-bottom: 10px;
 	float: left;
 }
-
+.logo{
+	width: 150px;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 30px;
+}
 .NT .ten{
 	color: blue;
 	font-size: 14px;

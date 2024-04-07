@@ -34,7 +34,12 @@ ul li a{
 	border-radius: 5px;
 	transition: background-color 0.3s;
 }
-
+.logo{
+	width: 150px;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 30px;
+}
 ul li a:hover{
 	border-radius: 5px;
 	background: #676767;
