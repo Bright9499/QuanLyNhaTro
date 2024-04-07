@@ -200,7 +200,23 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID'])) {
 <footer class="footer">
     <p>&copy; 2024 Nhà trọ FPOLY. Bảo lưu mọi quyền.</p>
 </footer>
-
+<div class="chat" onClick="khungChat()">
+		<img src="img/hotline.png" id="hotline">
+		<img src="img/zalo-logo.png" id="zalo">
+		<img src="img/mess.png" id="mess">
+		<img src="img/chat.png" id="chatImg" >
+	</div>
+	<div class="khungChat" id="khungChat">
+		<div class="headerKhungChat">
+			<b>Chat với nhân viên để tư vấn</b>
+			<a href="#" onClick="khungChat()">X</a>
+		</div>
+		<div class="messageContainer" id="messageContainer"></div>
+		<div class="bottomKhungChat">
+			<input type="text" id="inputMessage" placeholder="Nhập tin nhắn...">
+			<button onClick="sendMessage(event)">Gửi</button>
+		</div>
+	</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 <script src="js/index.js"></script>
 </body>

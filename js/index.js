@@ -112,3 +112,53 @@ function toggleMenu() {
     menu.style.display = 'none';
   }
 }
+//ho tro
+function khungChat(){
+	var khungchat = document.getElementById("khungChat");
+	var mess = document.getElementById("mess");
+	var zalo = document.getElementById("zalo");
+	var hotline = document.getElementById("hotline");
+	if(khungchat.style.display == 'none'){
+		khungchat.style.display = 'block';
+		mess.style.display = "block";
+		zalo.style.display = "block";
+		hotline.style.display = "block";
+	}else{
+		khungchat.style.display = 'none';
+		mess.style.display = "none";
+		zalo.style.display = "none";
+		hotline.style.display = "none";
+	}
+}
+
+var isFirstMessage = true;
+
+function sendMessage(event) {
+  event.preventDefault();
+  
+  var inputMessage = document.getElementById("inputMessage");
+  var messageContainer = document.getElementById("messageContainer");
+
+  var message = inputMessage.value.trim();
+  if (message === "") return; // Thoát hàm nếu không có nội dung nhập vào
+
+  var userMessage = document.createElement("div");
+  userMessage.textContent = message;
+  userMessage.classList.add("user-message"); // Thêm class "user-message"
+
+  messageContainer.appendChild(userMessage);
+
+  inputMessage.value = ""; // Làm trống trường nhập
+
+  if (isFirstMessage) {
+    var systemMessage = document.createElement("div");
+    systemMessage.innerHTML = "(Đây là tin nhắn tự động)"+"<br></br>"+" Fpoly House xin chào quý khách." +"<br></br>"+
+      "Đây là thông tin của Fpoly House quý khách có thể liên hệ trực tiếp nào cần:<br>" +
+      "- Số hotline: <a href='tel:0773699825'>0773699825</a> <br> Hoặc <a href='tel:0877410924'>0877410924</a>";
+    systemMessage.classList.add("system-message"); // Thêm class "system-message"
+
+    messageContainer.appendChild(systemMessage);
+
+    isFirstMessage = false; // Đánh dấu không còn là tin nhắn đầu tiên
+  }
+}
