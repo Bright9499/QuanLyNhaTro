@@ -138,6 +138,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID'])) {
                     echo '</a>'; // Đóng thẻ <a> trước khi mở <button>
                     echo '<form action="addnhatroyt.php?id=' . htmlspecialchars($row["nhatro_id"]) . '" method="post">';
                     echo '<button class="themYT" type="submit" name="add">Thêm vào mục yêu thích</button>';
+                    echo '<button class="themYT" style="color: #1e2c3c" type="submit" name="report">Báo Cáo Vi Phạm</button>';
                     echo '</form>';
                     echo '</div>';
                 }
