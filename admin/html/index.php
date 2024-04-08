@@ -149,133 +149,21 @@ checkAdminRole();
                     href="#"
                     target="_blank"
                     class="menu-link">
-                    <div data-i18n="CRM">CRM</div>
+                    <div data-i18n="CRM">Quản Lý Bài Đăng</div>
                   </a>
                 </li>
                 <li class="menu-item active">
                   <a href="index.html" class="menu-link">
-                    <div data-i18n="Analytics">Analytics</div>
+                    <div data-i18n="Analytics">Quản Lý Báo Cáo - Report</div>
                   </a>
                 </li>
+                  <li class="menu-item active">
+                      <a href="index.html" class="menu-link">
+                          <div data-i18n="Analytics">Quản Lý Người Dùng</div>
+                      </a>
+                  </li>
               </ul>
             </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">Account Settings</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="pages-account-settings-account.php" class="menu-link">
-                    <div data-i18n="Account">Account</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="pages-account-settings-notifications.html" class="menu-link">
-                    <div data-i18n="Notifications">Notifications</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="pages-account-settings-connections.html" class="menu-link">
-                    <div data-i18n="Connections">Connections</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-                <div data-i18n="Authentications">Authentications</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="quanlibaidang.php" class="menu-link" target="_blank">
-                    <div data-i18n="Basic">Quản lý bài đăng</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="auth-register-basic.html" class="menu-link" target="_blank">
-                    <div data-i18n="Basic">Register</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
-                    <div data-i18n="Basic">Forgot Password</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-            <ul class="menu-inner py-1">
-                <!-- Dashboards -->
-                <li class="menu-item active open">
-                    <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                        <div data-i18n="Dashboards">Dashboards</div>
-                    </a>
-                    <ul class="menu-sub">
-                        <li class="menu-item">
-                            <a
-                                    href="#"
-                                    target="_blank"
-                                    class="menu-link">
-                                <div data-i18n="CRM">CRM</div>
-                            </a>
-                        </li>
-                        <li class="menu-item active">
-                            <a href="index.html" class="menu-link">
-                                <div data-i18n="Analytics">Analytics</div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-item">
-                    <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                        <div data-i18n="Account Settings">Account Settings</div>
-                    </a>
-                    <ul class="menu-sub">
-                        <li class="menu-item">
-                            <a href="pages-account-settings-account.php" class="menu-link">
-                                <div data-i18n="Account">Account</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="pages-account-settings-notifications.html" class="menu-link">
-                                <div data-i18n="Notifications">Notifications</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="pages-account-settings-connections.html" class="menu-link">
-                                <div data-i18n="Connections">Connections</div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-item">
-                    <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-                        <div data-i18n="Authentications">Authentications</div>
-                    </a>
-                    <ul class="menu-sub">
-                        <li class="menu-item">
-                            <a href="auth-login-basic.html" class="menu-link" target="_blank">
-                                <div data-i18n="Basic">Login</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="auth-register-basic.html" class="menu-link" target="_blank">
-                                <div data-i18n="Basic">Register</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
-                                <div data-i18n="Basic">Forgot Password</div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
         </aside>
         <!-- / Menu -->
 

@@ -1,3 +1,9 @@
+<?php
+include '../function/authen.php';
+// Sử dụng function
+checkAdminRole();
+?>
+
 <!DOCTYPE html>
 
 <html
@@ -115,76 +121,35 @@
 
           <div class="menu-inner-shadow"></div>
 
-          <ul class="menu-inner py-1">
-            <!-- Dashboards -->
-            <li class="menu-item active open">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Dashboards">Dashboards</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="menu-link">
-                    <div data-i18n="CRM">CRM</div>
-                  </a>
+            <ul class="menu-inner py-1">
+                <!-- Dashboards -->
+                <li class="menu-item active open">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                        <div data-i18n="Dashboards">Dashboards</div>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item">
+                            <a
+                                    href="#"
+                                    target="_blank"
+                                    class="menu-link">
+                                <div data-i18n="CRM">Quản Lý Bài Đăng</div>
+                            </a>
+                        </li>
+                        <li class="menu-item active">
+                            <a href="index.html" class="menu-link">
+                                <div data-i18n="Analytics">Quản Lý Báo Cáo - Report</div>
+                            </a>
+                        </li>
+                        <li class="menu-item active">
+                            <a href="index.html" class="menu-link">
+                                <div data-i18n="Analytics">Quản Lý Người Dùng</div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="menu-item active">
-                  <a href="index.html" class="menu-link">
-                    <div data-i18n="Analytics">Analytics</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">Account Settings</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="pages-account-settings-account.php" class="menu-link">
-                    <div data-i18n="Account">Account</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="pages-account-settings-notifications.html" class="menu-link">
-                    <div data-i18n="Notifications">Notifications</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="pages-account-settings-connections.html" class="menu-link">
-                    <div data-i18n="Connections">Connections</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-                <div data-i18n="Authentications">Authentications</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="quanlibaidang.php" class="menu-link" target="_blank">
-                    <div data-i18n="Basic">Quản lý bài đăng</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="auth-register-basic.html" class="menu-link" target="_blank">
-                    <div data-i18n="Basic">Register</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
-                    <div data-i18n="Basic">Forgot Password</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+            </ul>
         </aside>
         <!-- / Menu -->
 
@@ -233,7 +198,6 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-medium d-block">John Doe</span>
                             <small class="text-muted">Admin</small>
                           </div>
                         </div>
@@ -255,23 +219,14 @@
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle ms-1">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
                       <div class="dropdown-divider"></div>
                     </li>
-                    <li>
-                      <a class="dropdown-item" href="javascript:void(0);">
-                        <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
-                    </li>
+                      <li>
+                          <a id="logoutButton" class="dropdown-item" href="javascript:void(0);">
+                              <i class="bx bx-power-off me-2"></i>
+                              <span class="align-middle">Log Out</span>
+                          </a>
+                      </li>
                   </ul>
                 </li>
                 <!--/ User -->
@@ -295,7 +250,7 @@
         <tr>
           <?php
           // Hiển thị tiêu đề các cột
-          $columnNames = ['STT', 'Mã nhà trọ', 'Thông tin liên hệ', 'Địa chỉ', 'Giá thuê', 'Mã người đăng', 'Chi tiết','Action'];
+          $columnNames = ['STT', 'Mã nhà trọ', 'Thông tin liên hệ', 'Địa chỉ', 'Giá thuê', 'Mã user','Trang Thái','Action'];
           foreach ($columnNames as $columnName) {
               echo "<th>$columnName</th>";
           }
@@ -318,17 +273,13 @@ if ($result->num_rows > 0) {
         echo "<td>{$row['diachi']}</td>";
         echo "<td>{$row['gia']}</td>";
         echo "<td>{$row['MaNg_dang']}</td>";
-        echo '<td><a href="xemThem.html" class="xemThem">Xem thêm</a></td>';
+        echo "<td>";
+        echo $row['status'] == 1 ? 'Deny' : 'Approve';
+        echo "</td>";
         // Thêm dropdown menu cho các hành động
         echo '<td>';
-        echo '  <div class="dropdown">';
-        echo '    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">';
-        echo '      ...';
-        echo '    </button>';
-        echo '     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">';
-        echo '      <li><a class="dropdown-item" href="edit.php?id=' . $row['nhatro_id'] . '">Sửa</a></li>';
-        echo '      <li><a class="dropdown-item" href="delete.php?id=' . $row['nhatro_id'] . '">Xóa</a></li>';
-        echo '    </ul>';
+        echo '      <a href="../function/baidang_management.php?id=' . $row['nhatro_id'] . '&type=approve">Duyệt</a>';
+        echo '      <a style="color: red" href="../function/baidang_management.php?id=' . $row['nhatro_id'] . '&type=deny">Khóa</a>';
         echo '  </div>';
         echo '</td>';
         echo "</tr>";
@@ -417,5 +368,10 @@ $conn->close();
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script>
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            window.location.href = '../function/logout.php'; // 'logout.php' là trang PHP xử lý đăng xuất
+        });
+    </script>
   </body>
 </html>

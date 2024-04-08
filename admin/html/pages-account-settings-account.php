@@ -1,20 +1,5 @@
 <?php
-function checkAdminRole() {
-    // Kiểm tra xem session đã được khởi động chưa
-    if (session_status() == PHP_SESSION_NONE) {
-        session_start();
-    }
-
-    // Kiểm tra xem người dùng đã đăng nhập chưa và vai trò có phải là admin không
-    if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
-        // Người dùng là admin, có thể tiếp tục thực hiện hành động
-        return true;
-    } else {
-        // Người dùng không phải là admin hoặc chưa đăng nhập, chuyển hướng đến trang đăng nhập hoặc thông báo lỗi
-        header("Location: ../../dangnhap.php"); // Thay 'login.php' bằng đường dẫn đến trang đăng nhập của bạn
-        exit; // Dừng script để ngăn không cho thực hiện thêm
-    }
-}
+include 'function/authen.php';
 // Sử dụng function
 checkAdminRole();
 ?>
@@ -148,58 +133,17 @@ checkAdminRole();
                                     href="#"
                                     target="_blank"
                                     class="menu-link">
-                                <div data-i18n="CRM">CRM</div>
+                                <div data-i18n="CRM">Quản Lý Bài Đăng</div>
                             </a>
                         </li>
                         <li class="menu-item active">
-                            <a href="index.php" class="menu-link">
-                                <div data-i18n="Analytics">Analytics</div>
+                            <a href="index.html" class="menu-link">
+                                <div data-i18n="Analytics">Quản Lý Báo Cáo - Report</div>
                             </a>
                         </li>
-                    </ul>
-                </li>
-                <li class="menu-item">
-                    <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                        <div data-i18n="Account Settings">Account Settings</div>
-                    </a>
-                    <ul class="menu-sub">
-                        <li class="menu-item">
-                            <a href="pages-account-settings-account.php" class="menu-link">
-                                <div data-i18n="Account">Account</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="pages-account-settings-notifications.php" class="menu-link">
-                                <div data-i18n="Notifications">Notifications</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="pages-account-settings-connections.php" class="menu-link">
-                                <div data-i18n="Connections">Connections</div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-item">
-                    <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-                        <div data-i18n="Authentications">Authentications</div>
-                    </a>
-                    <ul class="menu-sub">
-                        <li class="menu-item">
-                            <a href="quanlibaidang.php" class="menu-link" target="_blank">
-                                <div data-i18n="Basic">Quản lý bài đăng</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="auth-register-basic.php" class="menu-link" target="_blank">
-                                <div data-i18n="Basic">Register</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="auth-forgot-password-basic.php" class="menu-link" target="_blank">
-                                <div data-i18n="Basic">Forgot Password</div>
+                        <li class="menu-item active">
+                            <a href="index.html" class="menu-link">
+                                <div data-i18n="Analytics">Quản Lý Người Dùng</div>
                             </a>
                         </li>
                     </ul>
