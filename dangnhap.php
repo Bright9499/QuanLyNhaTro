@@ -22,6 +22,9 @@ if(isset($_POST['dangnhap'])){
         if ($user["role"] == 'admin') {
             header("Location: admin/html/index.php?id=" .$user["ID"] . "");
         } elseif ($user["role"] == 'user') {
+          $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+          $sql= "UPDATE user SET last_login_time = CURRENT_TIME, login_url = '$url' where email='$email' AND delete_fg = 0   ";
+          $result = mysqli_query($conn, $sql);
             header("Location: index.php?id=" .$user["ID"] . "");
         }
 
