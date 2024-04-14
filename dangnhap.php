@@ -18,6 +18,8 @@ if(isset($_POST['dangnhap'])){
         // Successful login
         $_SESSION['name'] = $user["name"]; // Sử dụng username từ cơ sở dữ liệu
         $_SESSION['role'] = $user["role"];
+        $_SESSION['id'] = $user["ID"];
+        $_SESSION['login'] = true;
 
         if ($user["role"] == 'admin') {
             header("Location: admin/html/index.php?id=" .$user["ID"] . "");

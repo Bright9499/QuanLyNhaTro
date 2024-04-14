@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Real Estate Rental Platform</title>
+<title>Quản Lý Nhà Trọ</title>
 <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -104,7 +104,9 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID'])) {
         <input type="text" name="district" id="quan" style="display: none;">
         <input type="text" name="ward" id="phuong" style="display: none;">
         <button type="submit" name="search" id="btnTK">Tìm kiếm</button>
+
     </form>
+    <button id="demo-1" >Tìm kiếm 2</button>
 </div>
 <div class="lb1">
     <h1>Nhà cho thuê ở khu vực Hồ Chí Minh - Sài Gòn</h1>
@@ -221,5 +223,7 @@ if(isset($_SESSION['userID']) && !empty($_SESSION['userID'])) {
 	</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 <script src="js/index.js"></script>
+<script src="js/alert.js"></script>
+
 </body>
 </html>
